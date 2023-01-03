@@ -11,7 +11,25 @@
   <script type="text/babel">
     const appEl = document.querySelector('#app')
     const root = ReactDOM.createRoot(appEl)
-    root.render(<h1>こんにちは</h1>)
+    // root.render(<h1>こんにちは</h1>)
+    // コンポーネントを使用する（関数コンポーネント）
+    // function Example() {
+    //   return <h1>Hello React</h1>
+    // }
+    const Example = () => <h1>Hello React Arrow</h1>
+    const Example2 = () => {
+      /*
+      * 複数行になる場合は（）をつける。
+      * ※javascriptのreturnの特性
+      * (returnの行は普通に改行してしまうと、returnするものがないとされてしまう)
+      */
+      return (
+        <div>
+          <h1>Hello React Arrow2</h1>
+        </div>
+      )
+    }
+    root.render(<Example2/>)
   </script>
 </body>
 </html>
